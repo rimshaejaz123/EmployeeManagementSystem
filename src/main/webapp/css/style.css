@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Changed from height to min-height for scrolling */
+    min-height: 100vh;
     background-color: #ffffff;
 }
 
@@ -127,14 +127,14 @@ h2 {
     width: 100%;
     min-height: 100vh;
     background: #f4f6f9;
-    overflow-x: hidden; /* Prevents whole page horizontal scroll */
+    overflow-x: hidden;
 }
 
 /* Sidebar */
 .sidebar {
     width: 250px;
-    min-width: 250px;       /* FIX: Never shrink below 250px */
-    flex-shrink: 0;         /* FIX: Forces sidebar to stay 250px */
+    min-width: 250px;
+    flex-shrink: 0;
     background: #ffffff;
     padding: 20px;
     display: flex;
@@ -174,8 +174,8 @@ h2 {
 .main-content {
     flex: 1;
     padding: 30px;
-    width: 100%;       /* Ensures it fills remaining space */
-    overflow-x: auto;  /* FIX: Adds scrollbar only to content if tables are too wide */
+    width: 100%;
+    overflow-x: auto;
 }
 
 /* Stats Cards */
@@ -210,7 +210,7 @@ h2 {
 
 .card-icon {
     font-size: 40px;
-    color: #4a90e2; /* Blue Icon Color */
+    color: #4a90e2;
 }
 
 /* Chart & Notices Section */
@@ -257,7 +257,7 @@ h2 {
 }
 
 .btn-add {
-    background: #1976d2; /* Dark Blue */
+    background: #1976d2;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -280,7 +280,7 @@ h2 {
 }
 
 .header-cell {
-    background: #1e3a8a; /* Navy Blue header */
+    background: #1e3a8a;
     color: white;
     padding: 12px;
     text-align: center;
@@ -304,7 +304,6 @@ h2 {
     font-size: 14px;
 }
 
-/* Specific alignment for Name/Email to look like image */
 .text-left { text-align: left; padding-left: 10px; }
 
 .action-btn {
@@ -323,73 +322,105 @@ h2 {
     background: #e3f2fd;
 }
 
-/* --- Department Page Styles (FIXED) --- */
+/* =========================================
+   DEPARTMENT PAGE STYLES (LIGHT VERSION)
+   ========================================= */
+
+/* 1. Filter Section (Dropdown Area) */
 .filter-section {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .filter-select {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    min-width: 200px;
+    padding: 10px 15px;
+    background-color: #ffffff; /* White Background */
+    border: 1px solid #ccc;    /* Light Grey Border */
+    color: #333;               /* Dark Text */
+    border-radius: 6px;
+    min-width: 250px;
+    outline: none;
+    font-size: 14px;
+    cursor: pointer;
 }
 
+/* 2. Department Card (Light Box) */
 .dept-card {
-    border: 1px solid #1976d2; /* Blue Border */
-    background: white;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 15px;
+    background: #ffffff;       /* White Background */
+    border: 1px solid #2563eb; /* Blue Border */
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Soft Light Shadow */
     
-    /* FIX: Ensure it stays within the container */
-    width: 100%; 
+    /* STABILITY FIX */
+    width: 100%;
     box-sizing: border-box;
 }
 
+.dept-card:hover {
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.15); /* Soft Blue Glow */
+}
+
+/* 3. Text Styling inside Card */
 .dept-info {
-    /* FIX: Takes up available space so it pushes the button to the right */
     flex: 1;
-    margin-right: 20px; 
+    margin-right: 20px;
 }
 
 .dept-info h2 {
-    font-size: 22px;
-    color: #000;
-    margin-bottom: 10px;
+    font-size: 24px;
+    color: #000000; /* Black Title */
+    margin-bottom: 8px;
+    font-weight: 700;
 }
 
 .dept-info p {
-    color: #333;
-    font-weight: 600;
+    color: #333333; /* Dark Grey Description */
     font-size: 14px;
-    /* FIX: If description is long, wrap it */
-    word-wrap: break-word; 
+    line-height: 1.5;
+    margin: 0;
+    font-weight: 500;
 }
 
+/* 4. "View" Button */
 .btn-view {
-    background: #1976d2;
+    background: #2563eb; /* Bright Blue */
     color: white;
     border: none;
-    padding: 8px 20px;
-    border-radius: 5px;
-    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 600;
     cursor: pointer;
     text-decoration: none;
-    /* FIX: Keeps the button shape solid */
-    white-space: nowrap; 
+    white-space: nowrap;
+    transition: background 0.3s;
     flex-shrink: 0;
 }
 
 .btn-view:hover {
-    background: #1565c0;
+    background: #1d4ed8; /* Darker Blue on Hover */
+}
+
+/* 5. "Create Department" Button */
+.btn-create {
+    background: #2563eb;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-create:hover {
+    background: #1d4ed8;
 }
 
 /* --- Notice Page Styles --- */

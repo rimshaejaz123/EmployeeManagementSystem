@@ -11,7 +11,7 @@
              <img src="images/login_image.png" alt="Login Illustration">
         </div>
         <div class="form-box">
-            <h2>Sign in to your account</h2>
+            <h2>Sign in to your account PLEASE</h2>
             
             <% String error = request.getParameter("error");
                if(error != null) { %>

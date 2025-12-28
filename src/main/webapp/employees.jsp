@@ -35,7 +35,7 @@
     <div class="main-content">
         
         <div class="page-header">
-            <h1 style="font-size: 28px;">Employee Management</h1>
+            <h1 style="font-size: 28px;">Employee Management System</h1>
             <a href="add_employee.jsp" class="btn-add"><i class="fa-solid fa-plus"></i> Add New Employee</a>
         </div>
 
